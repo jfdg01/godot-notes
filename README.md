@@ -13,7 +13,7 @@ For example:
 @export var click_area: Area2D
 ```
 
-# N2: `assert()`
+### N2: `assert()`
 
 The `assert()` function makes sure a certain object is actually loaded:
 
