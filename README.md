@@ -2,9 +2,7 @@
 
 Collection of notes and favored patterns for easy look up in the future.
 
-## General
-
-### N1: `@export` <a id="n1"></a>
+## N1: `@export` <a id="n1"></a>
 
 Use `@export` to define an external variable that can be loaded from the inspector inside the node, to facilitate the dynamic loading of nodes instead of hard codign the names using the `$path/node` syntax.
 
@@ -15,7 +13,7 @@ For example:
  @export var click_area: Area2D
 ```
 
-### N2: `assert()` <a id="n2"></a>
+## N2: `assert()` <a id="n2"></a>
 
 The `assert()` function makes sure a certain object is actually loaded:
 
@@ -26,7 +24,7 @@ The `assert()` function makes sure a certain object is actually loaded:
  assert(click_area, "Please set up the click area")
 ```
 
-### N3: Code organizing: The Actor view <a id="n3"></a>
+## N3: Code organizing: The Actor view <a id="n3"></a>
 
 To manage scenes, scripts and assets, the prefered way is to organize the code into an `actors/` folder, that will include the relevant code for that actor:
 
@@ -46,7 +44,7 @@ For example:
 
 This modularity allows ous to change anything in the same place, enforcing cohesion.
 
-### N4: `class_name` <a id="n4"></a>
+## N4: `class_name` <a id="n4"></a>
 
 Every `.gd` script file is a class by default, but they are anonymous, to call a class we need to name it:
 
@@ -67,7 +65,7 @@ func heal_entity(target: Slime):
     target.health += 5
 ```
 
-### N5: Node hierarchy over file hierarchy <a id="n5"></a>
+## N5: Node hierarchy over file hierarchy <a id="n5"></a>
 
 Instead of having a giant `Player.gd` with 1000 lines handling Input, Health, and Movement, allow Child Nodes to be "Components".
 
