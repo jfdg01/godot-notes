@@ -24,14 +24,14 @@ The `assert()` function makes sure a certain object is actually loaded:
  assert(click_area, "Please set up the click area")
 ```
 
-## N3: Code organizing: The Actor view <a id="n3"></a>
+## N3: Code organizing: The Scenes view <a id="n3"></a>
 
-To manage scenes, scripts and assets, the prefered way is to organize the code into an `actors/` folder, that will include the relevant code for that actor:
+To manage scenes, scripts and assets, the prefered way is to organize the code into an `scenes/` folder, that will include the relevant code for that actor:
 
 For example:
 
 ```bash
-/actors
+/scenes
     /cloud_pot
         cloud_pot.tscn
         cloud_pot.gd
@@ -40,6 +40,9 @@ For example:
     /enemy_slime
         slime.tscn
         slime.gd
+    /ui
+        progress_bar.tscn
+        progress_bar.gd
 ```
 
 This modularity allows ous to change anything in the same place, enforcing cohesion.
@@ -77,3 +80,7 @@ For example, we'd have this Scene Tree:
   * SpineSprite (Visuals)
 
 And using [N1](#n1) we can dynamically load them, facilitating the reordering and renaming of the nodes.
+
+## N6: Having a Main node <a id=n6></a>
+
+For orchestrating all components and scenes, we generally need a main class. This way we can emit singals from the components and the main can listes to them. (this is a bit fuzzy yet WIP)
